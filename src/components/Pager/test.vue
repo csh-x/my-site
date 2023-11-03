@@ -2,13 +2,13 @@
  * @Author: csh
  * @Date: 2023-11-03 08:40:00
  * @LastEditors: csh
- * @LastEditTime: 2023-11-03 08:41:23
+ * @LastEditTime: 2023-11-03 23:56:41
  * @FilePath: /my-site/src/components/Pager/test.vue
  * @Description: 
 -->
 <template>
     <div id="app">
-        <h1>App组件</h1>
+        <h1>Pager-App</h1>
         <Pager @pageChange="handlePageChange" :total="total" :current="current" :visibleNmber="visibleNmber"/>
     </div>
 </template>
