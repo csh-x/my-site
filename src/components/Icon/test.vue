@@ -2,19 +2,19 @@
  * @Author: csh
  * @Date: 2023-11-03 23:43:52
  * @LastEditors: csh
- * @LastEditTime: 2023-11-03 23:44:59
+ * @LastEditTime: 2023-11-04 21:52:23
  * @FilePath: /my-site/src/components/Icon/test.vue
  * @Description: 
 -->
 <template>
     <div id="app">
         <h1>App组件</h1>
-        <Icon  />
+        <Icon v-for="(typeItem, i) in types" :key="i" :type="typeItem" />
     </div>
 </template>
 
 <script>
-import Icon from "./"
+import Icon, { types } from "./"
 
 export default {
     name: "App",
@@ -23,6 +23,7 @@ export default {
     },
     data() {
         return {
+            types,
         };
     },
     methods: {

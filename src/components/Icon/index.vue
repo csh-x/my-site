@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-02 09:12:59
  * @LastEditors: csh
- * @LastEditTime: 2023-11-03 23:43:42
+ * @LastEditTime: 2023-11-04 21:52:55
  * @FilePath: /my-site/src/components/Icon/index.vue
  * @Description: 
 -->
@@ -15,7 +15,8 @@
       home: 'icon-home',
       user: 'icon-yonghuguanli',
       login: 'icon-denglurizhi'
-  }
+  } 
+  export const types = Object.keys(classMap)
   export default {
       props: {
           type: {
