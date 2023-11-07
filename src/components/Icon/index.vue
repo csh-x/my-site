@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-02 09:12:59
  * @LastEditors: csh
- * @LastEditTime: 2023-11-05 16:17:46
+ * @LastEditTime: 2023-11-07 20:18:27
  * @FilePath: /my-site/src/components/Icon/index.vue
  * @Description: 
 -->
@@ -24,10 +24,10 @@ const classMap = {
     blog: "iconblog",
     code: "iconcode",
     about: "iconset_about_hov",
-    weixin: "iconweixin",
-    mail: "iconemail",
-    github: "icongithub",
-    qq: "iconsign_qq",
+    weixin: "icon-weixin",
+    mail: "icon-mail-fill",
+    github: "icon-github-fill",
+    qq: "icon-QQ-circle-fill",
     arrowUp: "iconiconfonticonfonti2copy",
     arrowDown: "iconiconfonticonfonti2",
     chat: "iconliuyan",
@@ -49,7 +49,7 @@ export default {
 </script>
   
   <style scoped>
-@import "//at.alicdn.com/t/c/font_4312462_n7exqe3nn1.css";
+@import "//at.alicdn.com/t/c/font_4312462_e4t2r1sqasb.css";
 .iconfont {
     color: inherit;
     font-size: inherit;
