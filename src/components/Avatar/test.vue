@@ -2,34 +2,23 @@
  * @Author: csh
  * @Date: 2023-11-02 09:09:19
  * @LastEditors: csh
- * @LastEditTime: 2023-11-03 08:50:09
- * @FilePath: /my-site/src/components/Avatar/test.vue
+ * @LastEditTime: 2023-11-11 00:12:12
+ * @FilePath: /my-plugin/Users/csh/my-site/src/components/Avatar/test.vue
  * @Description: 计算属性test
 -->
 <template>
     <div id="app">
+        <Avatar :url="url" :size="30" />
     </div>
 </template>
 
 <script>
+import Avatar from "./";
 
 export default {
     name: "App",
     components: {
         Avatar,
-    },
-    computed: {
-        // 计算属性只有依赖项修改的时候才会调用，有缓存
-        fullName: {
-            get() {
-              console.log('调用了计算属性getter');
-             },
-            set(val) {},
-        },
-        fullName() {
-            console.log('fullName called');
-            
-        }
     },
     data() {
         return {
