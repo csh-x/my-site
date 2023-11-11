@@ -1,3 +1,12 @@
+<!--
+ * @Author: csh
+ * @Date: 2023-11-11 12:41:16
+ * @LastEditors: csh
+ * @LastEditTime: 2023-11-11 12:55:00
+ * @FilePath: /my-plugin/Users/csh/my-site/src/App.vue
+ * @Description: 
+-->
+<!-- csh -->
 <template>
     <div id="app">
         <h1>App组件</h1>
