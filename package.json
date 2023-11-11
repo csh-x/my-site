@@ -4,17 +4,25 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --host 0.0.0.0",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "test:Pager": "vue serve ./src/components/Pager/test.vue",
+    "test:Avatar": "vue serve ./src/components/Avatar/test.vue",
+    "test:Icon": "vue serve ./src/components/Icon/test.vue",
+    "test:Empty": "vue serve ./src/components/Empty/test.vue",
+    "test:ImageLoader": "vue serve ./src/components/ImageLoader/test.vue",
+    "test:Contact": "vue serve ./src/components/SiteAside/Contact/test.vue",
+    "test:Menu": "vue serve ./src/components/SiteAside/Menu/test.vue",
+    "test:SiteAside": "vue serve ./src/components/SiteAside/test.vue"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "less-loader": "^5.0.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "less": "^4.0.0",
-    "less-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.14"
   }
 }
