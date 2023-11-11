@@ -2,8 +2,8 @@
  * @Author: csh
  * @Date: 2023-11-11 12:41:16
  * @LastEditors: csh
- * @LastEditTime: 2023-11-11 12:55:00
- * @FilePath: /my-plugin/Users/csh/my-site/src/App.vue
+ * @LastEditTime: 2023-11-12 00:38:36
+ * @FilePath: /my-site/src/App.vue
  * @Description: 
 -->
 <!-- csh -->
@@ -12,7 +12,7 @@
         <h1>App组件</h1>
         <Pager @pageChange="handlePageChange" :total="total" :current="current" :visibleNmber="visibleNmber"/>
     </div>
-</template>
+</template> 
 
 <script>
 import Pager from "./components/Pager"
