@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-07 20:25:38
  * @LastEditors: csh
- * @LastEditTime: 2023-11-12 23:27:12
+ * @LastEditTime: 2023-11-12 23:59:45
  * @FilePath: /csh-plugin/Users/csh/my-site/src/components/SiteAside/Menu/index.vue
  * @Description: 
 -->
@@ -60,7 +60,7 @@ export default {
     color: @gray;
     a {
         &.selected {
-            background: darken(@words, 8%);
+            background: darken(@words, 3%);
         }
         display: block;
         padding: 12px 50px;

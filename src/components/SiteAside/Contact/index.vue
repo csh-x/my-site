@@ -2,8 +2,8 @@
  * @Author: csh
  * @Date: 2023-11-06 22:01:28
  * @LastEditors: csh
- * @LastEditTime: 2023-11-07 20:24:35
- * @FilePath: /my-site/src/components/Contact/index.vue
+ * @LastEditTime: 2023-11-13 00:02:29
+ * @FilePath: /csh-plugin/Users/csh/my-site/src/components/SiteAside/Contact/index.vue
  * @Description: 
 -->
 <template>
@@ -65,7 +65,6 @@ export default {
 @import "~@/styles/global.less";
 
 .contact-container {
-    padding: 20px;
     margin: 0;
     color: @gray;
     @itemHeight: 30px;
@@ -84,6 +83,7 @@ export default {
             display: flex;
             align-items: center;
             cursor: pointer;
+            font-size: 14px;
 
             .icon {
                 font-size: 26px;
