@@ -2,8 +2,8 @@
  * @Author: csh
  * @Date: 2023-11-06 22:01:37
  * @LastEditors: csh
- * @LastEditTime: 2023-11-07 20:28:11
- * @FilePath: /my-site/src/components/Menu/test.vue
+ * @LastEditTime: 2023-11-12 22:52:09
+ * @FilePath: /csh-plugin/Users/csh/my-site/src/components/SiteAside/Menu/test.vue
  * @Description: 
 -->
 <template>
@@ -28,8 +28,9 @@ export default {
 @import "~@/styles/global.less";
 
 .test-container {
-    width: 400px;
+    width: 300px;
     height: 600px;
-    border: 1px solid red;
+    margin: 0 auto;
+    background: black;
 }
 </style>

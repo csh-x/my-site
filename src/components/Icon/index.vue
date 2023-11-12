@@ -2,8 +2,8 @@
  * @Author: csh
  * @Date: 2023-11-02 09:12:59
  * @LastEditors: csh
- * @LastEditTime: 2023-11-07 20:18:27
- * @FilePath: /my-site/src/components/Icon/index.vue
+ * @LastEditTime: 2023-11-12 23:08:33
+ * @FilePath: /csh-plugin/Users/csh/my-site/src/components/Icon/index.vue
  * @Description: 
 -->
 <template>
@@ -21,16 +21,17 @@ const classMap = {
     close: "iconguanbi",
     warn: "iconjinggao",
     info: "iconxinxi",
-    blog: "iconblog",
+    project: "icon-PROJECT",
+    blog: "icon-joblog",
     code: "iconcode",
-    about: "iconset_about_hov",
+    about: "icon-about",
     weixin: "icon-weixin",
     mail: "icon-mail-fill",
     github: "icon-github-fill",
     qq: "icon-QQ-circle-fill",
     arrowUp: "iconiconfonticonfonti2copy",
     arrowDown: "iconiconfonticonfonti2",
-    chat: "iconliuyan",
+    chat: "icon-liuyan",
 };
 export const types = Object.keys(classMap);
 export default {
@@ -49,7 +50,7 @@ export default {
 </script>
   
   <style scoped>
-@import "//at.alicdn.com/t/c/font_4312462_e4t2r1sqasb.css";
+@import "//at.alicdn.com/t/c/font_4312462_aru4v7xdcx.css";
 .iconfont {
     color: inherit;
     font-size: inherit;
