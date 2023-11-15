@@ -2,52 +2,49 @@
  * @Author: csh
  * @Date: 2023-11-11 12:41:16
  * @LastEditors: csh
- * @LastEditTime: 2023-11-12 00:38:36
- * @FilePath: /my-site/src/App.vue
+ * @LastEditTime: 2023-11-15 23:20:56
+ * @FilePath: /csh-plugin/Users/csh/my-site/src/App.vue
  * @Description: 
 -->
 <!-- csh -->
 <template>
-    <div id="app">
-        <h1>App组件</h1>
-        <Pager @pageChange="handlePageChange" :total="total" :current="current" :visibleNmber="visibleNmber"/>
+    <div class="app-container">
+        <Layout>
+            <template #left>
+                <div class="side">
+                    <SiteAside />
+                </div>
+            </template>
+            <template #default>
+                中间主区域
+            </template>
+        </Layout>
     </div>
 </template> 
 
 <script>
-import Pager from "./components/Pager"
+import Layout from "./components/Layout";
+import SiteAside from "./components/SiteAside"
 
 export default {
     name: "App",
     components: {
-      Pager
+      Layout, SiteAside
     },
     data() {
-        return {
-            total: 300,
-            visibleNmber: 15,
-            current: 13,
-        };
     },
     methods: {
-        handlePageChange(newPage) {
-            console.log(newPage);
-            this.current = newPage
-        }
     }
 };
 </script>
 
-<style scoped>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-.iconfont {
-  color: red;
+<style scoped lang="less">
+@import "~@/styles/mixin.less";
+.app-container {
+    .self-fill(fixed);
+    .side {
+        width: 250px;
+        height: 100%;
+    }
 }
 </style>
