@@ -2,23 +2,23 @@
  * @Author: csh
  * @Date: 2023-11-07 20:25:38
  * @LastEditors: csh
- * @LastEditTime: 2023-11-12 23:59:45
+ * @LastEditTime: 2023-12-04 00:16:58
  * @FilePath: /csh-plugin/Users/csh/my-site/src/components/SiteAside/Menu/index.vue
  * @Description: 
 -->
 <template>
     <nav class="menu-container">
-        <a
+        <RouterLink
             v-for="item in list"
             :key="item.link"
-            :href="item.link"
+            :to="item.link"
             :class="{ selected: isSelected(item) }"
         >
             <div class="icon">
                 <Icon :type="item.icon" />
             </div>
             <span>{{ item.text }}</span>
-        </a>
+        </RouterLink>
     </nav>
 </template>
 

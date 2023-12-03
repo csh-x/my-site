@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-11 12:41:16
  * @LastEditors: csh
- * @LastEditTime: 2023-11-15 23:20:56
+ * @LastEditTime: 2023-12-03 23:56:07
  * @FilePath: /csh-plugin/Users/csh/my-site/src/App.vue
  * @Description: 
 -->
@@ -16,7 +16,7 @@
                 </div>
             </template>
             <template #default>
-                中间主区域
+                <RouterView />
             </template>
         </Layout>
     </div>
@@ -32,6 +32,9 @@ export default {
       Layout, SiteAside
     },
     data() {
+        return {
+            
+        }
     },
     methods: {
     }
