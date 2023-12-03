@@ -2,23 +2,25 @@
  * @Author: csh
  * @Date: 2023-11-07 20:25:38
  * @LastEditors: csh
- * @LastEditTime: 2023-11-12 23:59:45
- * @FilePath: /csh-plugin/Users/csh/my-site/src/components/SiteAside/Menu/index.vue
+ * @LastEditTime: 2023-12-05 22:50:14
+ * @FilePath: /my-site/src/components/SiteAside/Menu/index.vue
  * @Description: 
 -->
 <template>
     <nav class="menu-container">
-        <a
+        <RouterLink
             v-for="item in list"
             :key="item.link"
-            :href="item.link"
-            :class="{ selected: isSelected(item) }"
+            :to="{ name: item.name }"
+            :exact="item.exact"
+            active-class="selected"
+            exact-active-class=""
         >
             <div class="icon">
                 <Icon :type="item.icon" />
             </div>
             <span>{{ item.text }}</span>
-        </a>
+        </RouterLink>
     </nav>
 </template>
 
@@ -31,25 +33,14 @@ export default {
     data() {
         return {
             list: [
-                { icon: "home", text: "首页", link: "/" },
-                { icon: "blog", text: "文章", link: "/blog", startWith: true },
-                { icon: "about", text: "关于我", link: "/about" },
-                { icon: "project", text: "项目与效果", link: "/project" },
-                { icon: "chat", text: "留言板", link: "/message" },
+                { icon: "home", exact: true, text: "首页", name: "Home" },
+                { icon: "blog", exact: false, text: "文章", name: "Blog", startWith: true },
+                { icon: "about", exact: true, text: "关于我", name: "About" },
+                { icon: "project", exact: true, text: "项目与效果", name: "Project" },
+                { icon: "chat", exact: true, text: "留言板", name: "Message" },
             ],
         };
-    },
-    methods: {
-        isSelected(item) {
-            let link = item.link.toLowerCase(); // 当前地址
-            let currentPath = location.pathname.toLowerCase(); // 地址栏地址
-            if (item.startWith) {
-                return currentPath.startsWith(link);
-            } else {
-                return currentPath === link;
-            }
-        },
-    },
+    }
 };
 </script>
 
