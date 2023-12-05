@@ -2,13 +2,12 @@
  * @Author: csh
  * @Date: 2023-11-07 20:25:38
  * @LastEditors: csh
- * @LastEditTime: 2023-12-05 22:53:55
+ * @LastEditTime: 2023-12-05 22:55:20
  * @FilePath: /my-site/src/components/SiteAside/Menu/index.vue
  * @Description: 
 -->
 <template>
     <nav class="menu-container">
-        <RouterLink
         <RouterLink
             v-for="item in list"
             :key="item.link"
@@ -21,7 +20,6 @@
                 <Icon :type="item.icon" />
             </div>
             <span>{{ item.text }}</span>
-        </RouterLink>
         </RouterLink>
     </nav>
 </template>
