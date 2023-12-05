@@ -2,9 +2,9 @@
  * @Author: csh
  * @Date: 2023-11-15 22:13:20
  * @LastEditors: csh
- * @LastEditTime: 2023-11-15 23:07:44
- * @FilePath: /csh-plugin/Users/csh/my-site/src/components/Layout/index.vue
- * @Description: 
+ * @LastEditTime: 2023-12-05 23:11:44
+ * @FilePath: /my-site/src/components/Layout/index.vue
+ * @Description: 布局组件
 -->
 <template>
     <div class="layout-container">

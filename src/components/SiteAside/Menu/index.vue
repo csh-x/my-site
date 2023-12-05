@@ -2,9 +2,9 @@
  * @Author: csh
  * @Date: 2023-11-07 20:25:38
  * @LastEditors: csh
- * @LastEditTime: 2023-12-05 22:55:20
+ * @LastEditTime: 2023-12-05 23:08:49
  * @FilePath: /my-site/src/components/SiteAside/Menu/index.vue
- * @Description: 
+ * @Description: 无数据占位组件
 -->
 <template>
     <nav class="menu-container">

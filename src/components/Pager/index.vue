@@ -2,9 +2,9 @@
  * @Author: csh
  * @Date: 2023-11-02 18:45:28
  * @LastEditors: csh
- * @LastEditTime: 2023-11-03 08:39:37
+ * @LastEditTime: 2023-12-05 23:11:38
  * @FilePath: /my-site/src/components/Pager/index.vue
- * @Description: 
+ * @Description: 翻页组件
 -->
 <template>
     <div class="pager-container" v-if="pagerNumber > 1">
