@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-05 14:42:28
  * @LastEditors: csh
- * @LastEditTime: 2023-11-06 00:14:33
+ * @LastEditTime: 2023-12-10 22:31:56
  * @FilePath: /my-site/src/components/Empty/index.vue
  * @Description: 
 -->
@@ -35,7 +35,7 @@ export default {
 @import "~@/styles/var.less";
 
 .empty-container {
-    .abs-center();
+    .psi-center();
     color: @gray;
     text-align: center;
 
