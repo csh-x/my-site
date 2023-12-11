@@ -1,8 +1,8 @@
 /*
  * @Author: csh
- * @Date: 2023-10-17 22:00:01
+ * @Date: 2023-11-11 12:41:16
  * @LastEditors: csh
- * @LastEditTime: 2023-12-10 23:46:45
+ * @LastEditTime: 2023-12-11 23:50:51
  * @FilePath: /my-site/src/main.js
  * @Description: 
  */
@@ -13,8 +13,11 @@ import router from '@/router'
 
 import ShowMessage from './utils/ShowMessage';
 Vue.prototype.$showMessage = ShowMessage
+
+import "./mock"
+import "./apis/test"
  
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 new Vue({
   router,
