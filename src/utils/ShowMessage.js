@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-12-07 11:20:53
  * @LastEditors: csh
- * @LastEditTime: 2023-12-10 23:43:57
+ * @LastEditTime: 2023-12-12 00:09:43
  * @FilePath: /my-site/src/utils/ShowMessage.js
  * @Description: 消息弹窗
  */
@@ -38,11 +38,14 @@ export default function (options = {}) {
     div.className = `${styles.message} ${typeClassName}`
 
     // 容器position是否改动过
-    if (getComputedStyle(container).postion === "static") {
-        container.style.position = "relative"
+    if (options.container) {
+        if (getComputedStyle(container).postion === "static") {
+            container.style.position = "relative"
+        }
     }
+
     container.appendChild(div)
-    
+
     // 将浏览器强制渲染
     div.clientHeight; // 读去宽高这些属性会触发浏览器 reflow
 
