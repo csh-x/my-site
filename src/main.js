@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-11 12:41:16
  * @LastEditors: csh
- * @LastEditTime: 2023-12-11 23:50:51
+ * @LastEditTime: 2023-12-13 23:03:02
  * @FilePath: /my-site/src/main.js
  * @Description: 
  */
@@ -15,7 +15,7 @@ import ShowMessage from './utils/ShowMessage';
 Vue.prototype.$showMessage = ShowMessage
 
 import "./mock"
-import "./apis/test"
+// import "./apis/test"
  
 // Vue.config.productionTip = false
 
