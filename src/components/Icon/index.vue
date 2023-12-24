@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-02 09:12:59
  * @LastEditors: csh
- * @LastEditTime: 2023-12-10 22:55:18
+ * @LastEditTime: 2023-12-24 21:59:23
  * @FilePath: /my-site/src/components/Icon/index.vue
  * @Description: 图标组件
 -->
@@ -29,8 +29,8 @@ const classMap = {
     mail: "icon-mail-fill",
     github: "icon-github-fill",
     qq: "icon-QQ-circle-fill",
-    arrowUp: "iconiconfonticonfonti2copy",
-    arrowDown: "iconiconfonticonfonti2",
+    arrowUp: "icon-jiantoushang",
+    arrowDown: "icon-jiantouxia",
     chat: "icon-liuyan",
 };
 export const types = Object.keys(classMap);
@@ -49,8 +49,8 @@ export default {
 };
 </script>
   
-  <style scoped>
-@import "//at.alicdn.com/t/c/font_4312462_gptsjx66baq.css";
+<style scoped>
+@import "//at.alicdn.com/t/c/font_4312462_56i89hx36ok.css";
 .iconfont {
     color: inherit;
     font-size: inherit;
