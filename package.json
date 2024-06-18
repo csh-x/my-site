@@ -12,12 +12,17 @@
     "test:ImageLoader": "vue serve ./src/components/ImageLoader/test.vue",
     "test:Contact": "vue serve ./src/components/SiteAside/Contact/test.vue",
     "test:Menu": "vue serve ./src/components/SiteAside/Menu/test.vue",
-    "test:SiteAside": "vue serve ./src/components/SiteAside/test.vue"
+    "test:SiteAside": "vue serve ./src/components/SiteAside/test.vue",
+    "test:Layout": "vue serve ./src/components/Layout/test.vue",
+    "test:Bg": "vue serve ./src/components/Bg/test.vue"
   },
   "dependencies": {
+    "axios": "^1.6.2",
     "core-js": "^3.8.3",
     "less-loader": "^5.0.0",
-    "vue": "^2.6.14"
+    "mockjs": "^1.1.0",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
