@@ -2,31 +2,48 @@
  * @Author: csh
  * @Date: 2023-11-23 22:37:26
  * @LastEditors: csh
- * @LastEditTime: 2023-12-24 23:48:12
+ * @LastEditTime: 2024-06-19 23:38:52
  * @FilePath: /my-site/src/views/Home/index.vue
  * @Description: 主页
 -->
 <template>
-    <div class="home-container" ref="container">
+    <div class="home-container" ref="container" @wheel="handleWheel">
         <!-- <Bg /> -->
         <!-- 轮播图 -->
-        <ul class="carousel-container" :style="{ marginTop }">
+        <ul
+            class="carousel-container"
+            :style="{ marginTop }"
+            @transitionend="handleTranstionEnd"
+        >
             <li v-for="item in banners" :key="item.id">
                 <CarouselItem :carouselData="item" />
             </li>
         </ul>
 
         <!-- 上下箭头 -->
-        <div v-show="index !== 0" class="icon icon-up" @click="switchTo(index-1)">
+        <div
+            v-show="index !== 0"
+            class="icon icon-up"
+            @click="switchTo(index - 1)"
+        >
             <Icon type="arrowUp" />
         </div>
-        <div v-show="index !== banners.length-1" class="icon icon-down" @click="switchTo(index +1)">
+        <div
+            v-show="index !== banners.length - 1"
+            class="icon icon-down"
+            @click="switchTo(index + 1)"
+        >
             <Icon type="arrowDown" />
         </div>
 
         <!--轮播图点 -->
         <ul class="course">
-            <li @click="switchTo(i)" :class="{ active: index === i }" v-for="(item, i) in banners" :key="item.id"></li>
+            <li
+                @click="switchTo(i)"
+                :class="{ active: index === i }"
+                v-for="(item, i) in banners"
+                :key="item.id"
+            ></li>
         </ul>
     </div>
 </template>
@@ -47,15 +64,16 @@ export default {
             banners: [],
             index: 1, // 当前展示的第几个图片
             containerHeight: 0,
+            switching: true,
         };
     },
     computed: {
         marginTop() {
-            return -this.index * this.containerHeight + 'px'
-        }
+            return -this.index * this.containerHeight + "px";
+        },
     },
     mounted() {
-        this.containerHeight = this.$refs.container.clientHeight
+        this.containerHeight = this.$refs.container.clientHeight;
     },
     async created() {
         this.banners = await getData();
@@ -64,8 +82,28 @@ export default {
     methods: {
         // 切换轮播图
         switchTo(index) {
-            this.index = index
-        }
+            this.index = index;
+        },
+
+        handleWheel(e) {
+            if (this.switching) {
+                return;
+            }
+            if (e.deltaY < -5 && this.index > 0) {
+                this.switching = true; //滚动中
+                console.log("上");
+                this.index--;
+            }
+            if (e.deltaY > 5 && this.index < this.banners.length - 1) {
+                this.switching = true; //滚动中
+                console.log("下");
+                this.index++;
+            }
+        },
+
+        handleTranstionEnd() {
+            this.switching = false; //滚动结束
+        },
     },
 };
 </script>
@@ -141,7 +179,7 @@ export default {
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
-        right: 15px; 
+        right: 15px;
         li {
             width: 10px;
             height: 10px;
