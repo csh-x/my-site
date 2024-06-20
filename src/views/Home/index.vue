@@ -2,7 +2,7 @@
  * @Author: csh
  * @Date: 2023-11-23 22:37:26
  * @LastEditors: csh
- * @LastEditTime: 2024-06-19 23:38:52
+ * @LastEditTime: 2024-06-20 22:57:02
  * @FilePath: /my-site/src/views/Home/index.vue
  * @Description: 主页
 -->
@@ -74,6 +74,10 @@ export default {
     },
     mounted() {
         this.containerHeight = this.$refs.container.clientHeight;
+        window.addEventListener("resize", this.handleResize);
+    },
+    destroyed() {
+        window.removeEventListener("resize", this.handleResize)
     },
     async created() {
         this.banners = await getData();
@@ -91,12 +95,10 @@ export default {
             }
             if (e.deltaY < -5 && this.index > 0) {
                 this.switching = true; //滚动中
-                console.log("上");
                 this.index--;
             }
             if (e.deltaY > 5 && this.index < this.banners.length - 1) {
                 this.switching = true; //滚动中
-                console.log("下");
                 this.index++;
             }
         },
@@ -104,6 +106,10 @@ export default {
         handleTranstionEnd() {
             this.switching = false; //滚动结束
         },
+
+        handleResize() {
+            this.containerHeight = this.$refs.container.clientHeight;
+        }
     },
 };
 </script>
